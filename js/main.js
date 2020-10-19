@@ -1,7 +1,7 @@
 /*funcion que se ejecuta solo cuando se haya cargado toda la pagina */
 $(document).ready(function(){
     $('.menu li:has(ul)').click(function(e){
-        e.preventDefault();
+       
 
         /*CONSULTO SI EL ELEMENTO CLICKEADO TIENE LA CLASE ACTIVADA */
         if($(this).hasClass('activado')){
