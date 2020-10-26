@@ -21,27 +21,29 @@
                     <li ><a href="../pages/introduccion.html"><i class="icono izquierda fab fa-js-square"></i> Introducción</a></li>
                     <li ><a href="#">Variables<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/variables.html">Introducción</a></li>
-                            <li><a href="../pages/introduccion.html">Null</a></li>
-                            <li><a href="#">Valor o Referencia</a></li>
+                            <li><a href="./variables.html">Introducción</a></li>
+                            <li><a href="./variablesTipos.html">Tipos de Variables</a></li>
+                            <li><a href="./variablesNull.html">Null</a></li>
+                            <li><a href="./variablesValorReferencia.html">Valor o Referencia</a></li>
                         </ul>
                     </li>
                     
-                    <li ><a href="#">Funciones<i class=" icono derecha fas fa-angle-down"></i></a>
+                    <li ><a href="#">Objetos<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/funciones.html">Introducción</a></li>
-                            <li><a href="../pages/funcionesCallbacks.html">Callbacks</a></li>
-                            <li><a href="../pages/funcionesClousures.html">Clousures</a></li>
-                            <li><a href="../pages/funcionesEventLoop.html">Event Loop</a></li>
-                            <li><a href="../pages/funcionesArrow.html">Arrow Function</a></li>
+                            <li><a href="./objetos.html">Introducción</a></li>
+                            <li><a href="./objetosCreacion.html">Creación</a></li>
+                            <li><a href="./objetosMetodos.html">Metodos</a></li>
+                            
+                            
                             
                         </ul>
                     </li>
-                    <li ><a href="#">Objetos<i class=" icono derecha fas fa-angle-down"></i></a>
+                    <li ><a href="#">Clases<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/objetos.html">Introducción</a></li>
-                            <li><a href="../pages/objetosConstructor.html">Constructor</a></li>
-                            <li><a href="../pages/objetosPrototype.html">Prototype</a></li>
+                            <li><a href="./Clases.html">Introducción</a></li>
+                            <li><a href="./ClasesMetodos.html">Metodos</a></li>
+                            <li><a href="./ClasesSubclases.html">Subclases</a></li>
+                            
                             
                             
                         </ul>
@@ -53,7 +55,100 @@
 
                 <div class="contenido">
                     <h1>Variables</h1>
-                </div>
+                    <p>
+                        Las variables en los lenguajes de programación siguen una lógica similar a las variables 
+                        utilizadas en otros ámbitos como las matemáticas. Una variable es un elemento que se emplea 
+                        para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear "programas
+                         genéricos", es decir, programas que funcionan siempre igual independientemente de los valores 
+                         concretos utilizados.
+                    </p>
+                    <p>
+                        De la misma forma que si en Matemáticas no existieran las variables no se podrían 
+                        definir las ecuaciones y fórmulas, 
+                        en programación no se podrían hacer programas realmente útiles sin las variables.
+                    </p>
+                    <p>
+                        Si no existieran variables, un programa que suma dos números podría escribirse como:
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    resultado = 3 + 1
+                </pre>
+                    <p>
+                        El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número 
+                        de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso,
+                         el programa obtiene un resultado incorrecto.
+                    </p>
+                    <p>
+                        Sin embargo, el programa se puede rehacer de la siguiente manera utilizando 
+                        variables para almacenar y referirse a cada número:
+                    </p>
+                        
+                    <pre class="prettyprint codigo">
+
+                    numero_1 = 3
+                    numero_2 = 1
+                    resultado = numero_1 + numero_2
+                    </pre>
+                    <p>
+                        Los elementos numero_1 y numero_2 son variables que almacenan los valores que utiliza el programa. 
+                        El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este 
+                        programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de
+                         las variables numero_1 y numero_2, el programa sigue funcionando correctamente.
+                    </p>
+                    <p>
+                        Las variables en JavaScript se crean mediante la palabra reservada var. 
+                        De esta forma, el ejemplo anterior se puede realizar en JavaScript de la 
+                        siguiente manera:
+
+
+                    </p>
+                   
+                    <pre class="prettyprint codigo">
+
+                    var numero_1 = 3;
+                    var numero_2 = 1;
+                    var resultado = numero_1 + numero_2;
+
+                        </pre>
+
+                        <p>
+                            La palabra reservada var solamente se debe indicar al definir por primera vez la variable, 
+                            lo que se denomina declarar una variable. Cuando se utilizan las variables en el resto de 
+                            instrucciones del script, solamente es necesario indicar su nombre. En otras palabras, en 
+                            el ejemplo anterior sería un error indicar lo siguiente:
+                        </p>
+
+                    <pre class="prettyprint codigo">
+
+                    var numero_1 = 3;
+                    var numero_2 = 1;
+                    var resultado = var numero_1 + var numero_2;
+        
+                    </pre>
+
+                    <p>
+                        El nombre de una variable también se conoce como identificador y debe cumplir las siguientes normas:
+
+
+                    </p>
+                    <p>
+                        Sólo puede estar formado por letras, números y los símbolos $ (dólar) y _ (guión bajo).
+                        El primer carácter no puede ser un número.
+                        Por tanto, las siguientes variables tienen nombres correctos:
+
+
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    var $numero1;
+                    var _$letra;
+                    var $$$otroNumero;
+                    var $_a__$4;
+            
+                        </pre>
+                    
+                    </div>
     </div>
     
 
@@ -63,5 +158,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="../js/jquery.js"></script>
 <script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>

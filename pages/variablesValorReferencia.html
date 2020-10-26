@@ -21,27 +21,39 @@
                     <li ><a href="../pages/introduccion.html"><i class="icono izquierda fab fa-js-square"></i> Introducción</a></li>
                     <li ><a href="#">Variables<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/variables.html">Introducción</a></li>
-                            <li><a href="../pages/introduccion.html">Null</a></li>
-                            <li><a href="#">Valor o Referencia</a></li>
+                            <li><a href="./variables.html">Introducción</a></li>
+                            <li><a href="./variablesTipos.html">Tipos de Variables</a></li>
+                            <li><a href="./variablesNull.html">Null</a></li>
+                            <li><a href="./variablesValorReferencia.html">Valor o Referencia</a></li>
                         </ul>
                     </li>
                     
                     <li ><a href="#">Funciones<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/funciones.html">Introducción</a></li>
-                            <li><a href="../pages/funcionesCallbacks.html">Callbacks</a></li>
-                            <li><a href="../pages/funcionesClousures.html">Clousures</a></li>
-                            <li><a href="../pages/funcionesEventLoop.html">Event Loop</a></li>
-                            <li><a href="../pages/funcionesArrow.html">Arrow Function</a></li>
+                            <li><a href="./funciones.html">Introducción</a></li>
+                            <li><a href="./funcionesCallbacks.html">Callbacks</a></li>
+                            <li><a href="./funcionesClousures.html">Clousures</a></li>
+                            <li><a href="./funcionesEventLoop.html">Event Loop</a></li>
+                            <li><a href="./funcionesArrow.html">Arrow Function</a></li>
                             
                         </ul>
                     </li>
                     <li ><a href="#">Objetos<i class=" icono derecha fas fa-angle-down"></i></a>
                         <ul class="menu">
-                            <li><a href="../pages/objetos.html">Introducción</a></li>
-                            <li><a href="../pages/objetosConstructor.html">Constructor</a></li>
-                            <li><a href="../pages/objetosPrototype.html">Prototype</a></li>
+                            <li><a href="./objetos.html">Introducción</a></li>
+                            <li><a href="./objetosCreacion.html">Creación</a></li>
+                            <li><a href="./objetosMetodos.html">Metodos</a></li>
+                            
+                            
+                            
+                        </ul>
+                    </li>
+                    <li ><a href="#">Clases<i class=" icono derecha fas fa-angle-down"></i></a>
+                        <ul class="menu">
+                            <li><a href="./Clases.html">Introducción</a></li>
+                            <li><a href="./ClasesMetodos.html">Metodos</a></li>
+                            <li><a href="./ClasesSubclases.html">Subclases</a></li>
+                            
                             
                             
                         </ul>
@@ -52,8 +64,28 @@
                 </div>
 
                 <div class="contenido">
-                    <h1>Variables Valor por Referencia</h1>
-                </div>
+                    <h1>Por Valor vs. Por Referencia</h1>
+                    <p>
+                        ¿Que valor va a tener la variable first después de correr estos comandos?
+                    </p>
+                    
+                    <pre class="prettyprint codigo">
+
+                    > var first, second
+                    > first = "hello"
+                    > second = "goodbye"
+                    > first = second
+                    > second = "wait, you've forgotten your hat!"
+                    </pre>
+                    <p>
+                        En JavaScript, las primitivas (números, string, booleanos) son pasados por valor. 
+                        Esto significa que cuando le das a una variable el valor de otra, el valor que tiene es 
+                        copiado a la variable destino, pero las dos variables no mantienen conexión alguna entre ellas.
+                    </p>
+                   
+                    
+                    
+                    </div>
     </div>
     
 
@@ -63,5 +95,6 @@
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="../js/jquery.js"></script>
 <script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>

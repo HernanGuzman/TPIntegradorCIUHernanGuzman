@@ -10,7 +10,10 @@
 margin: 0;
 padding: 0;
 
+
 }
+
+
 
 a{
   text-decoration: none;
@@ -31,6 +34,7 @@ display: inline-block;
 line-height: 20px;
 font-family: Arial;
 float: left;
+position: fixed;
 
 }
 
@@ -42,9 +46,19 @@ margin: 10px;
 display: inline-block;
 line-height: 20px;
 font-family: Arial;
+color: rgb(196, 166, 128);;
 }
 .contenedor-menu .menu{
   width: 100%;
+}
+
+.codigo{
+  background-color: #ffffff;
+  width: 800px;
+}
+
+.link{
+  color: #a4bd16;;
 }
 
 .contenedor-menu ul{
@@ -194,7 +208,7 @@ display: none;
 
   float: right;
   font-size: 16px;
-  margin: 6px 40px;
+  margin: 20px 40px;
   transition-duration: 0.4s;
   cursor: pointer;
   font-style: normal;

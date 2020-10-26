@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+
+    <title>Document</title>
+</head>
+<body class="fondoOscuro">
+    <div class="menu">
+        
+        <img src="../images/logo-unahur.png" class="tamanio logo"> 
+        <a class="buttonVolver buttonAzul" href="../index.html">Inicio</a>
+    </div>
+    <div>
+        <div class="contenedor-menu">
+            <!--<a href="#" class="btn-menu">Menu<i class="fas fa-bars"></i></a>-->
+                <ul class="menu">
+                    <li ><a href="../pages/introduccion.html"><i class="icono izquierda fab fa-js-square"></i> Introducción</a></li>
+                    <li ><a href="#">Variables<i class=" icono derecha fas fa-angle-down"></i></a>
+                        <ul class="menu">
+                            <li><a href="./variables.html">Introducción</a></li>
+                            <li><a href="./variablesTipos.html">Tipos de Variables</a></li>
+                            <li><a href="./variablesNull.html">Null</a></li>
+                            <li><a href="./variablesValorReferencia.html">Valor o Referencia</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li ><a href="#">Funciones<i class=" icono derecha fas fa-angle-down"></i></a>
+                        <ul class="menu">
+                            <li><a href="./funciones.html">Introducción</a></li>
+                            <li><a href="./funcionesCallbacks.html">Callbacks</a></li>
+                            <li><a href="./funcionesClousures.html">Clousures</a></li>
+                            <li><a href="./funcionesEventLoop.html">Event Loop</a></li>
+                            <li><a href="./funcionesArrow.html">Arrow Function</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li ><a href="#">Objetos<i class=" icono derecha fas fa-angle-down"></i></a>
+                        <ul class="menu">
+                            <li><a href="./objetos.html">Introducción</a></li>
+                            <li><a href="./objetosCreacion.html">Creación</a></li>
+                            <li><a href="./objetosMetodos.html">Metodos</a></li>
+                            
+                            
+                            
+                        </ul>
+                    </li>
+                    <li ><a href="#">Clases<i class=" icono derecha fas fa-angle-down"></i></a>
+                        <ul class="menu">
+                            <li><a href="./Clases.html">Introducción</a></li>
+                            <li><a href="./ClasesMetodos.html">Metodos</a></li>
+                            <li><a href="./ClasesSubclases.html">Subclases</a></li>
+                            
+                            
+                            
+                        </ul>
+                    </li>
+                    
+                </ul>
+                    
+                </div>
+
+                <div class="contenido">
+                    <h1>Tipos de Variables</h1>
+                    <p>
+                        Aunque todas las variables de JavaScript se crean de la misma forma 
+                        (mediante la palabra reservada var), la forma en la que se les asigna un valor 
+                        depende del tipo de valor que se quiere almacenar (números, textos, etc.)
+                    </p>
+                    <h2>Numericas</h2>
+                    <p>
+                        Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o 
+                        decimales (llamados float en inglés). En este caso, el valor se asigna indicando directamente 
+                        el número entero o decimal. Los números decimales utilizan el carácter .
+                         (punto) en vez de , (coma) para separar la parte entera y la parte decimal:
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    var iva = 16;        // variable tipo entero
+                    var total = 234.65;  // variable tipo decimal
+                    </pre>
+                    <h2>Cadenas de Texto</h2>
+                    <p>
+                        Se utilizan para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor 
+                        a la variable, se encierra el valor entre comillas dobles o simples, 
+                        para delimitar su comienzo y su final:
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    var mensaje = "Bienvenido a nuestro sitio web";
+                    var nombreProducto = 'Producto ABC';
+                    var letraSeleccionada = 'c';
+                    </pre>
+                    <p>
+                        En ocasiones, el texto que se almacena en las variables no es tan sencillo. 
+                        Si por ejemplo el propio texto contiene comillas simples o dobles, 
+                        la estrategia que se sigue es la de encerrar el texto con las comillas 
+                        (simples o dobles) que no utilice el texto:
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    /* El contenido de texto1 tiene comillas simples, por lo que
+                    se encierra con comillas dobles */
+                    var texto1 = "Una frase con 'comillas simples' dentro";
+                    
+                    /* El contenido de texto2 tiene comillas dobles, por lo que
+                    se encierra con comillas simples */
+                    var texto2 = 'Una frase con "comillas dobles" dentro';
+                </pre>
+                <h2>Arrays</h2>
+                    <p>
+                        En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. 
+                        No obstante, el término array es el más utilizado 
+                        y es una palabra comúnmente aceptada en el entorno de la programación.
+                    </p>
+                    <p>
+                        Un array es una colección de variables, que pueden ser todas del mismo tipo o 
+                        cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo:
+                         si una aplicación necesita 
+                        manejar los días de la semana, se podrían crear siete variables de tipo texto:
+                    </p>
+                    <pre class="prettyprint codigo">
+
+                    var dia1 = "Lunes";
+                    var dia2 = "Martes";
+                    ...
+                    var dia7 = "Domingo";
+                    </pre>
+                    <p>
+                        Aunque el código anterior no es incorrecto, sí que es poco eficiente y 
+                        complica en exceso la programación. Si en vez de los días de la semana se
+                         tuviera que guardar el nombre de los meses del año, el nombre de todos los 
+                         países del mundo o las mediciones diarias de temperatura de los últimos 100 años, 
+                        se tendrían que crear decenas o cientos de variables.
+                    </p>
+                    <p>
+                        En este tipo de casos, se pueden agrupar todas las variables relacionadas en una colección de 
+                        variables o array. 
+                        El ejemplo anterior se puede rehacer de la siguiente forma:
+                    </p>
+                        
+                    <pre class="prettyprint codigo">
+
+                    var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
+                    </pre>
+                    <p>
+                        Ahora, una única variable llamada dias almacena todos los valores relacionados entre sí, 
+                        en este caso los días de la semana. Para definir un array, se utilizan los caracteres [ y ]
+                         para delimitar su comienzo y su final y se utiliza el carácter 
+                        , (coma) para separar sus elementos:
+                    </p>
+
+                    <pre class="prettyprint codigo">
+
+                    var nombre_array = [valor1, valor2, ..., valorN];</pre>
+                    <p>
+                        Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. 
+                        Cada elemento se accede indicando su posición dentro del array. 
+                        La única complicación, que es responsable de muchos errores cuando se empieza a programar, 
+                        es que las posiciones de los elementos empiezan a contarse en el 0 y no en el 1:
+
+
+                    </p>
+                   
+                    <pre class="prettyprint codigo">
+
+                    var diaSeleccionado = dias[0];    // diaSeleccionado = "Lunes"
+                    var otroDia = dias[5];            // otroDia = "Sábado"
+
+                        </pre>
+
+                        <p>
+                            En el ejemplo anterior, la primera instrucción quiere obtener el primer elemento del array. 
+                            Para ello, se indica el nombre del array y entre corchetes la posición del elemento dentro del array.
+                             Como se ha comentado, las posiciones se empiezan a contar en el 0, 
+                            por lo que el primer elemento ocupa la posición 0 y se accede a el mediante dias[0].
+                        </p>
+                    <h2>Booleanos</h2>
+                    <p>
+                        Las variables de tipo boolean o booleano también se conocen con el nombre de variables 
+                        de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación 
+                        avanzada con JavaScript del siguiente capítulo, su funcionamiento básico es muy sencillo.
+                        </p>
+
+                        <p>
+                            Una variable de tipo boolean almacena un tipo especial de valor que solamente puede tomar 
+                            dos valores: true (verdadero) o false (falso). 
+                            No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.
+                        </p>
+                        <p>
+                            Los únicos valores que pueden almacenar estas variables son true y false, por lo que no 
+                            pueden utilizarse los valores verdadero y falso.
+                             A continuación se muestra un par de variables de tipo booleano:
+                        </p>
+                        <pre class="prettyprint codigo">
+    
+                        var clienteRegistrado = false;
+                        var ivaIncluido = true;
+                        </pre>
+                    
+                    
+                    </div>
+    </div>
+    
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="../js/jquery.js"></script>
+<script src="../js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+</html>

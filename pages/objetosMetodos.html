@@ -64,106 +64,94 @@
                 </div>
 
                 <div class="contenido">
-                    <h1>Arrow function (Función flecha)</h1>
-                    <p>
-                        Las funciones de flecha se introdujeron en ES6 y 
-                        nos nos permiten escribir una sintaxis de función más corta:
-
-                    </p>
+                    <h1>Metodos de objetos</h1>
                     
-                    <p>Función normal</p>
-                    <pre class="prettyprint codigo">
-
-                    hello = function() {
-                        return "Hello World!";
-                      }
-                    </pre>
-
-                    <p>Función flecha</p>
-                    <pre class="prettyprint codigo">
-
-                    hello = () => {
-                        return "Hello World!";
-                      }
-                    </pre>
-
+            
             <p>
-                Esta función se puede declarar mas corta si tiene una sola declaración y
-                esta declaración devuelve un valor de la siguiente manera:
-
-            </p>
-            <p>Función flecha</p>
-                    <pre class="prettyprint codigo">
-
-                    hello = () => "Hello World!";
-                    </pre>
-
-            <p>Si la función recibe parametros se puede declarar de dos formas </p>
-                    <pre class="prettyprint codigo">
-
-                hello = (val) => "Hello " + val;
-
-                //o sin paréntesis
-                
-                hello = val => "Hello " + val;
-                    </pre>
-
-            <h2>¿Qué pasa con this?</h2>
-            <p>
-                El manejo de <em>this</em> en las funciones de flecha también es diferente en comparación con las funciones normales.
-                En las funciones flechas no hay vinculación de <em>this</em>. En el caso de las funciónes normales <em>this</em> hace 
-                referencia la objeto que llama a la función, que puede ser un botón, un documento, etc.botones, etc.
-            </p>
-            <p>
-                En el caso de las funciones flecha la palabra <em>this</em> hace referencia al objeto que 
-                definio la función flecha.
-            </p>
-
-            <p>
-                En el siguiente ejemplo podemos ver que se llama a un metodo dos veces, primero cuando se 
-                carga la pagina y otra cuando el usuario hace click en un botón.
-            </p>
-            <p>
-                Con función regular:
-            </p>
-            <p>
-                Devolvera dos objetos diferentes (ventana y botón)
+                Un método es una función asociada a un objeto, o, simplemente, un método es una propiedad 
+                de un objeto que es una función. Los métodos se definen normalmente como una función, con 
+                excepción de que tienen que ser asignados como la propiedad de un objeto.
+                 Consulte también definiciones de métodos para obtener más detalles. Un ejemplo puede ser:
             </p>
             <pre class="prettyprint codigo">
 
-            // Regular Function:
-            hello = function() {
-                document.getElementById("demo").innerHTML += this;
-            }
+                objectName.methodname = functionName;
 
-            // The window object calls the function:
-            window.addEventListener("load", hello);
-
-            // A button object calls the function:
-            document.getElementById("btn").addEventListener("click", hello);
+                var myObj = {
+                  myMethod: function(params) {
+                    // ...hacer algo
+                  }
+              
+                  // O ESTO TAMBIÉN FUNCIONA
+              
+                  myOtherMethod(params) {
+                    // ...hacer algo más
+                    }
+                };
                 </pre>
+            
+            <p>
+                donde objectName es un objeto existente, 
+                methodname es el nombre que se le va a asignar al método, y functionName es 
+                el nombre de la función.
+            </p>
+            <p>
+                Entonces puedes llamar al método en el contexto del objeto de la siguiente manera:
+            </p>
+
+            <pre class="prettyprint codigo">
+
+                object.methodname(params);
+            </pre>
+            
 
                 <p>
-                    Con función flecha:
-                </p>
-                <p>
-                    Devolvera dos veces el objeto ventana ya que es el propietario de la función.
+                    Puedes definir métodos para un tipo de objeto incluyendo una definición del método en la 
+                    función constructora del objeto. Podrías definir una función que formateé 
+                    y muestre las propiedades de los objetos del tipo Car previamente definidas; por ejemplo:
                 </p>
                 <pre class="prettyprint codigo">
-    
-                // Arrow Function:
-                hello = () => {
-                    document.getElementById("demo").innerHTML += this;
-                }
-    
-                // The window object calls the function:
-                window.addEventListener("load", hello);
-    
-                // A button object calls the function:
-                document.getElementById("btn").addEventListener("click", hello);
-                    </pre>
+
+                    function displayCar() {
+                        var result = `Un hermoso ${this.year} ${this.make} ${this.model}`;
+                        pretty_print(result);
+                      }
+                </pre>
+                <p>
+                    Donde pretty_print es una función para mostrar una línea horizontal y una cadena.
+                </p>
+                <p>
+                    Puedes hacer de esta función un método de Car agregando la declaración
+                </p>
+                <pre class="prettyprint codigo">
+
+                    this.displayCar = displayCar;
+                </pre>
+                <p>
+                    a la definición del objeto. Por lo tanto, la definición completa de Car ahora se verá así:
+                </p>
+                <pre class="prettyprint codigo">
+
+                    function Car(make, model, year, owner) {
+                        this.make = make;
+                        this.model = model;
+                        this.year = year;
+                        this.owner = owner;
+                        this.displayCar = displayCar;
+                      }
+                </pre>
+                <p>
+                    Entonces puedes llamar al método displayCar para cada uno de los objetos de la 
+                    siguiente manera:
 
 
+                </p>
+                <pre class="prettyprint codigo">
+
+                    car1.displayCar();
+                    car2.displayCar();
+                </pre>
+                
                     
                     </div>
     </div>
@@ -178,7 +166,3 @@
 <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
 </body>
 </html>
-
-
-
-
