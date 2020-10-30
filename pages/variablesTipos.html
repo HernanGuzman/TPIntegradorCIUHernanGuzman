@@ -72,10 +72,9 @@
                     </p>
                     <h2>Numericas</h2>
                     <p>
-                        Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o 
-                        decimales (llamados float en inglés). En este caso, el valor se asigna indicando directamente 
-                        el número entero o decimal. Los números decimales utilizan el carácter .
-                         (punto) en vez de , (coma) para separar la parte entera y la parte decimal:
+                        Las variables numéricas se utilizan para almacenar numéros enteros (integer en ingles) o decimales
+                        (float en ingles). Lo numeros decimales utilizan el caracter punto para separar la parte entera 
+                        de la decimal.
                     </p>
                     <pre class="prettyprint codigo">
 
@@ -84,9 +83,9 @@
                     </pre>
                     <h2>Cadenas de Texto</h2>
                     <p>
-                        Se utilizan para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor 
-                        a la variable, se encierra el valor entre comillas dobles o simples, 
-                        para delimitar su comienzo y su final:
+                        Son utilizadas para almacenar caracteres o frases de texto. Los caracteres o textos deben estar 
+                        encerrados entre comillas simples o dobles.
+                        
                     </p>
                     <pre class="prettyprint codigo">
 
@@ -112,15 +111,12 @@
                 </pre>
                 <h2>Arrays</h2>
                     <p>
-                        En ocasiones, a los arrays se les llama vectores, matrices e incluso arreglos. 
-                        No obstante, el término array es el más utilizado 
-                        y es una palabra comúnmente aceptada en el entorno de la programación.
+                        Tambien llamados vectores, matrices o arreglos.
+                        
                     </p>
                     <p>
                         Un array es una colección de variables, que pueden ser todas del mismo tipo o 
-                        cada una de un tipo diferente. Su utilidad se comprende mejor con un ejemplo sencillo:
-                         si una aplicación necesita 
-                        manejar los días de la semana, se podrían crear siete variables de tipo texto:
+                        cada una de un tipo diferente. Ejemplo con los dias de la semana:
                     </p>
                     <pre class="prettyprint codigo">
 
@@ -147,22 +143,18 @@
                     var dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"];
                     </pre>
                     <p>
-                        Ahora, una única variable llamada dias almacena todos los valores relacionados entre sí, 
-                        en este caso los días de la semana. Para definir un array, se utilizan los caracteres [ y ]
-                         para delimitar su comienzo y su final y se utiliza el carácter 
-                        , (coma) para separar sus elementos:
+                        De esta forma una sola variable "dias" contiene todos los valores de los dias. Para definir un array 
+                        se utilizan los [] para determinar el comienzo y el final, y se utiliza la coma (,) para separar los elementos:
+                        
+                         
                     </p>
 
                     <pre class="prettyprint codigo">
 
                     var nombre_array = [valor1, valor2, ..., valorN];</pre>
                     <p>
-                        Una vez definido un array, es muy sencillo acceder a cada uno de sus elementos. 
-                        Cada elemento se accede indicando su posición dentro del array. 
-                        La única complicación, que es responsable de muchos errores cuando se empieza a programar, 
-                        es que las posiciones de los elementos empiezan a contarse en el 0 y no en el 1:
-
-
+                        Para acceder al los elementos de un array se debe indicar la posición. Se debe tener en cuenta que la 
+                        primera posicion es la 0.
                     </p>
                    
                     <pre class="prettyprint codigo">
@@ -180,9 +172,8 @@
                         </p>
                     <h2>Booleanos</h2>
                     <p>
-                        Las variables de tipo boolean o booleano también se conocen con el nombre de variables 
-                        de tipo lógico. Aunque para entender realmente su utilidad se debe estudiar la programación 
-                        avanzada con JavaScript del siguiente capítulo, su funcionamiento básico es muy sencillo.
+                        LAs variables de tipo boolean o booleano son conocidas también como variables de tipo lógico                        Las variables de tipo boolean o booleano también se conocen con el nombre de variables 
+                        de tipo lógico. 
                         </p>
 
                         <p>
@@ -191,8 +182,6 @@
                             No se puede utilizar para almacenar números y tampoco permite guardar cadenas de texto.
                         </p>
                         <p>
-                            Los únicos valores que pueden almacenar estas variables son true y false, por lo que no 
-                            pueden utilizarse los valores verdadero y falso.
                              A continuación se muestra un par de variables de tipo booleano:
                         </p>
                         <pre class="prettyprint codigo">

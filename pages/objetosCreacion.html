@@ -68,17 +68,16 @@
                     
             
             <p>
-                JavaScript tiene una colección de objetos predefinidos. Además, puedes crear tus propios
-                objetos. En JavaScript 1.2 y versiones posteriores, puedes crear un objeto usando un 
+                En JavaScript 1.2 y versiones posteriores, puedes crear un objeto usando un 
                 iniciador de objeto. Como alternativa, puedes crear un constructor y 
                 luego crear una instancia de un objeto invocando esa función con el operador new.
             </p>
             <h2>Iniciadores de objetos</h2>
             <p>
-                Además de la creación de objetos utilizando una función constructora, puedes crear objetos 
+                Además de la creación de objetos utilizando un constructor, se puede crear objetos 
                 utilizando un iniciador de objeto. El uso de iniciadores de objetos a veces se denomina 
                 crear objetos con notación literal. 
-                "Iniciador de objeto" es consistente con la terminología utilizada por C++.
+                
             </p>
             <p>
                 La sintaxis para un objeto usando un iniciador de objeto es:
@@ -104,7 +103,7 @@
                 </p>
                 <ul>
                     <li>
-                        Definir el tipo de objeto escribiendo una función constructora. 
+                        Definir el tipo de objeto escribiendo un constructor. 
                         Existe una fuerte convención, con buena razón, para utilizar en mayúscula la letra inicial.
                     </li>
                     <li>
@@ -113,44 +112,44 @@
                 </ul>
                 <p>
                     Para definir un tipo de objeto, crea una función para el objeto que especifique su nombre, 
-                    propiedades y métodos. Por ejemplo, supongamos que deseas crear un tipo de objeto para coches. 
-                    Quieres llamar Car a este tipo de objeto, y deseas que tenga las siguientes
-                     propiedades: make, model y year. Para ello, podrías escribir la siguiente función:
+                    propiedades y métodos. Por ejemplo, supongamos que se desea crear un tipo de objeto para personas. 
+                    Se quiere llamar Persona a este tipo de objeto, y se desea que tenga las siguientes
+                     propiedades: nombre, direccion y telefono. Para ello, se podria escribir la siguiente función:
                 </p>
                 <pre class="prettyprint codigo">
     
-                    function Car(make, model, year) {
-                        this.make = make;
-                        this.model = model;
-                        this.year = year;
+                    function Persona(nombre, direccion, telefono) {
+                        this.nombre = nombre;
+                        this.direccion = direccion;
+                        this.telefono = telefono;
                       }
                     </pre>
                 <p>
-                    Ahora puedes crear un objeto llamado myCar de la siguiente manera:
+                    Ahora puedes crear un objeto llamado Juan de la siguiente manera:
                 </p>
                 <pre class="prettyprint codigo">
     
-                    var mycar = new Car('Eagle', 'Talon TSi', 1993);
+                    var Juan = new Persona('Juan', 'Direccion de Juan', 121212121);
                     </pre>
                 <p>
-                    Esta declaración crea myCar y le asigna los valores especificados a sus propiedades. 
-                    Entonces el valor de myCar.make es la cadena 
-                    "Eagle", para myCar.year es el número entero 1993, y así sucesivamente.
+                    Esta declaración crea Juan y le asigna los valores especificados a sus propiedades. 
+                    Entonces el valor de Juan.nombre es la cadena 
+                    "Juan", para Juan.telefono es el número entero 121212121, y así sucesivamente.
                 </p>
                 <p>
-                    Puedes crear cualquier número de objetos Car con las llamadas a new. Por ejemplo,
+                    Se puede crear cualquier número de objetos Persona con las llamadas a new. Por ejemplo,
                 </p>
 
                 <pre class="prettyprint codigo">
     
-                    var kenscar = new Car('Nissan', '300ZX', 1992);
-                    var vpgscar = new Car('Mazda', 'Miata', 1990);
+                    var Ramon = new Persona('Ramon Gonzalez', 'Dir Ramon', 12555555);
+                    var Luisa = new Persona('Luisa Miranda', 'Dir Luisa', 128888888);
                 </pre>
                 <h2>Creación con el metodo Object.create</h2>
                 <p>
                     Los objetos también se pueden crear por medio del método Object.create(). 
-                    Este método puede ser muy útil, ya que te permite elegir el prototipo 
-                    del objeto que deseas crear, sin tener que definir una función constructora.
+                    Este método puede ser muy útil, ya que permite elegir el prototipo 
+                    del objeto que se desea crear, sin tener que definir una función constructora.
                 </p>
                 <pre class="prettyprint codigo">
     

@@ -56,9 +56,10 @@
                 <div class="contenido">
                     <h1>Variables</h1>
                     <p>
-                        Las variables en los lenguajes de programación siguen una lógica similar a las variables 
-                        utilizadas en otros ámbitos como las matemáticas. Una variable es un elemento que se emplea 
-                        para almacenar y hacer referencia a otro valor. Gracias a las variables es posible crear "programas
+                        Una variable es un elemento que se emplea 
+                        para almacenar y hacer referencia a otro valor, mas en concreto es un espacio de memoria que se reservada
+                        para almacenar información necesaria para la ejecución de un programa.
+                         Gracias a las variables es posible crear "programas
                          genéricos", es decir, programas que funcionan siempre igual independientemente de los valores 
                          concretos utilizados.
                     </p>
@@ -68,20 +69,20 @@
                         en programación no se podrían hacer programas realmente útiles sin las variables.
                     </p>
                     <p>
-                        Si no existieran variables, un programa que suma dos números podría escribirse como:
+                        Ejemplo de programa sin la utilización de variables:
                     </p>
                     <pre class="prettyprint codigo">
 
                     resultado = 3 + 1
                 </pre>
                     <p>
-                        El programa anterior es tan poco útil que sólo sirve para el caso en el que el primer número 
-                        de la suma sea el 3 y el segundo número sea el 1. En cualquier otro caso,
-                         el programa obtiene un resultado incorrecto.
+                        Este calculo solo se podria utilizar para realizar la operación de 3 + 1. Si desearamos realizar otro calculo
+                        deberiamos cambiar el codigo.
+                        
                     </p>
                     <p>
-                        Sin embargo, el programa se puede rehacer de la siguiente manera utilizando 
-                        variables para almacenar y referirse a cada número:
+                        Ahora el ejemplo utilizando varables:
+                        
                     </p>
                         
                     <pre class="prettyprint codigo">
@@ -91,10 +92,10 @@
                     resultado = numero_1 + numero_2
                     </pre>
                     <p>
+                        Ahora el calculo se realiza en función del valor que contienen las varables numero_1 y numero_2. 
+                        Este programa funcionará correctamente para cualquier valor que se almacene en las variables.
                         Los elementos numero_1 y numero_2 son variables que almacenan los valores que utiliza el programa. 
-                        El resultado se calcula siempre en función del valor almacenado por las variables, por lo que este 
-                        programa funciona correctamente para cualquier par de números indicado. Si se modifica el valor de
-                         las variables numero_1 y numero_2, el programa sigue funcionando correctamente.
+                        
                     </p>
                     <p>
                         Las variables en JavaScript se crean mediante la palabra reservada var. 

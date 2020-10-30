@@ -66,11 +66,9 @@
                 <div class="contenido">
                     <h1>Objetos</h1>
                     <p>
-                        JavaScript está diseñado en un paradigma simple basado en objetos. Un objeto es una 
-                        colección de propiedades, y una propiedad es una asociación entre un nombre (o clave) y un valor. 
-                        El valor de una propiedad puede ser una función, en cuyo caso la propiedad es conocida como un método. 
-                        Además de los objetos que están predefinidos en el navegador, puedes definir tus propios objetos. 
-                        Este capítulo describe cómo usar objetos, propiedades, funciones y métodos; y cómo crear tus propios objectos.
+                        Un objeto es un conjunto de propiedades, y una propiedad es una asociación clave-valor. Cabe destacar
+                        que en Javascript el valor de una propiedad puede ser una función a la que se le llama método.
+                         
 
                     </p>
                     <h2>Visión general</h2>
@@ -79,18 +77,17 @@
                         El concepto de Objetos en JavaScript se puede entender con objetos tangibles de la vida real.
                     </p>
                     <p>
-                        En JavaScript, un objeto es un entidad independiente con propiedades y tipos. Compáralo con una taza, 
-                        por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, 
-                        un material del que está hecha, etc. Del mismo modo, 
-                        los objetos de JavaScript pueden tener propiedades que definan sus características. 
+                        En JavaScript, un objeto es un entidad independiente con propiedades y tipos. 
+                        Por ejemplo si una taza es un objeto con propiedades estas podrian ser el color, el tamaño, el peso, etc.                  por ejemplo. Una taza es un objeto con propiedades. Una taza tiene un color, un diseño, un peso, 
+                         
                     </p>
                     <h2>Objetos y propiedades</h2>
                     <p>
                         Un objeto de JavaScript tiene propiedades asociadas a él. Una propiedad de un objeto 
                         se puede explicar como una variable adjunta al objeto. Las propiedades de un objeto 
-                        básicamente son lo mismo que las variables comunes de JavaScript, excepto por el nexo con el objeto.
-                         Las propiedades de un objeto definen las características del objeto. 
-                        Accedes a las propiedades de un objeto con una simple notación de puntos:
+                        básicamente son lo mismo que las variables comunes de JavaScript, excepto por el nexo con el objeto ya que estas
+                        definen las características del objeto.
+                         
                     </p>
                     <pre class="prettyprint codigo">
 
@@ -101,17 +98,17 @@
                         Como todas las variables de JavaScript, tanto el nombre del objeto (que puede ser una 
                         variable normal) como el nombre de la propiedad son sensibles a mayúsculas y minúsculas. 
                         Puedes definir propiedades asignándoles un valor. Por ejemplo, vamos a crear un objeto llamado 
-                        myCar y le vamos
-                         a asignar propiedades denominadas make, model, y year de la siguiente manera:
+                        auto y le vamos
+                         a asignar propiedades denominadas marca, modelo, y año de la siguiente manera:
                     </p>
 
                     
                     <pre class="prettyprint codigo">
 
-                    var myCar = new Object();
-                    myCar.make = 'Ford';
-                    myCar.model = 'Mustang';
-                    myCar.year = 1969;
+                    var auto = new Object();
+                    auto.marca = 'Ford';
+                    auto.modelo = 'Mustang';
+                    auto.año = 1969;
                     </pre>
 
             <p>
@@ -123,35 +120,35 @@
             
                     <pre class="prettyprint codigo">
 
-                    var myCar = {
-                        make: 'Ford',
-                        model: 'Mustang',
-                        year: 1969
+                    var auto = {
+                        marca: 'Ford',
+                        modelo: 'Mustang',
+                        año: 1969
                     };
                     </pre>
 
             <p>Las propiedades no asignadas de un objeto son undefined (y​no null). </p>
                     <pre class="prettyprint codigo">
 
-                    myCar.color; // undefined
+                    auto.color; // undefined
                     </pre>
 
             
             <p>
-                También puedes acceder o establecer las propiedades de los objetos en JavaScript mediante la 
-                notación de corchetes ↑[]↓ (Para más detalle ve Accesores de propiedades). Los objetos, a veces 
+                También se puede acceder o establecer las propiedades de los objetos en JavaScript mediante la 
+                notación de corchetes ↑[]↓. Los objetos, a veces 
                 son llamados arreglos asociativos, debido a que cada propiedad está asociada con un valor de cadena 
                 que se puede utilizar para acceder a ella. 
-                Por lo tanto, por ejemplo, puedes acceder a las propiedades del objeto myCar de la siguiente manera:
+                Por lo tanto, por ejemplo, se puede acceder a las propiedades del objeto auto de la siguiente manera:
             </p>
             <pre class="prettyprint codigo">
 
-                    myCar['make']  = 'Ford';
-                    myCar['model'] = 'Mustang';
-                    myCar['year']  = 1969;
+                    auto['marca']  = 'Ford';
+                    auto['modelo'] = 'Mustang';
+                    auto['año']  = 1969;
                 </pre>
             <p>
-                También puedes acceder a las propiedades mediante el uso de un valor 
+                También se puede acceder a las propiedades mediante el uso de un valor 
                 de cadena que se almacena en una variable:
             </p>
 
@@ -161,11 +158,11 @@
             </p>
             <pre class="prettyprint codigo">
 
-                var propertyName = 'make';
-                myCar[propertyName] = 'Ford';
+                var propertyName = 'marca';
+                auto[propertyName] = 'Ford';
 
-                propertyName = 'model';
-                myCar[propertyName] = 'Mustang';
+                propertyName = 'modelo';
+                auto[propertyName] = 'Mustang';
             </pre>
             
                     

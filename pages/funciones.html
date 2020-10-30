@@ -67,14 +67,10 @@
                     <h1>Funciones</h1>
                     <p>
                         Cuando se desarrolla una aplicación compleja, es muy habitual utilizar 
-                        una y otra vez las mismas instrucciones. Un script para una tienda de comercio electrónico por 
-                        ejemplo, tiene que calcular el precio total de los productos varias veces, 
-                        para añadir los impuestos y los gastos de envío.
+                        una y otra vez las mismas instrucciones. Si un código se repite muchas veces se hace muy complejo
+                        su mantenimiento.
                     </p>
-                    <p>
-                        Cuando una serie de instrucciones se repiten una y otra vez, 
-                        se complica demasiado el código fuente de la aplicación, ya que:
-                    </p>
+                    
                     <ul>
                         <li>
                             El código de la aplicación es mucho más largo porque muchas instrucciones están repetidas.
@@ -86,13 +82,13 @@
                         </li>
                     </ul>
                     <p>
-                        Las funciones son la solución a todos estos problemas, tanto en JavaScript como en el 
-                        resto de lenguajes de programación. Una función es un conjunto de instrucciones 
-                        que se agrupan para realizar una tarea concreta y que se pueden reutilizar fácilmente.
+                        Para dar solución a este problema existen las funciones. Una función es un conjunto de instrucciones
+                        agrupadas que realizan un tarea concreta y puede reutilizase cuantas veces sea necesario.
+                        
                     </p>
                     <p>
-                        En el siguiente ejemplo, las instrucciones que suman los dos números y muestran un
-                         mensaje con el resultado se repiten una y otra vez:
+                        En el siguiente ejemplo la suma se repite tantas veces como se utiliza.
+                        
                     </p>
                     <pre class="prettyprint codigo">
 
@@ -121,11 +117,9 @@
                         </pre>
                     
                     <p>
-                        Aunque es un ejemplo muy sencillo, parece evidente que repetir las mismas 
-                        instrucciones a lo largo de todo el código no es algo recomendable. La solución que 
-                        proponen las funciones consiste en extraer las instrucciones que se repiten y sustituirlas 
-                        por una instrucción del tipo "en este punto, 
-                        se ejecutan las instrucciones que se han extraído":</p>
+                        Como se ve se repiten las mismas instrucciones en el código. Para solucionarlo las funciones extraen 
+                        las instrucciones que se repiten para agruparlas y que puedan ser reutilizadas.
+                    </p>
                     <pre class="prettyprint codigo">
 
                     var resultado;
@@ -168,10 +162,10 @@
                     <p>
                         El nombre de la función se utiliza para llamar a esa función cuando sea necesario. 
                         El concepto es el mismo que con las variables, a las que se les asigna un nombre único para 
-                        poder utilizarlas dentro del código. Después del nombre de la función, se incluyen dos paréntesis 
-                        cuyo significado se detalla más adelante. Por último, los símbolos { y } se utilizan para encerrar 
-                        todas las instrucciones que pertenecen a la función 
-                        (de forma similar a como se encierran las instrucciones en las estructuras if o for).</p>
+                        poder utilizarlas dentro del código. Después del nombre de la función, se incluyen dos paréntesis.
+                        Por último, los símbolos { y } se utilizan para encerrar 
+                        todas las instrucciones que pertenecen a la función.
+                    </p>
                         <p>
                             Volviendo al ejemplo anterior, se crea una función llamada suma_y_muestra de la siguiente forma:</p>
 
@@ -183,12 +177,10 @@
                           }
                     </pre>
                     <p>
-                        Lo que le falta a la función anterior son los parametros que debe recibir para realizar el calculo. 
-                        Las variables que necesitan las funciones se llaman argumentos. Antes de que pueda utilizarlos, la 
-                        función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento. Además, 
-                        al invocar la función, se deben incluir los valores que se le van a pasar a la función. Los 
-                        argumentos se indican dentro de 
-                        los paréntesis que van detrás del nombre de la función y se separan con una coma (,).
+                        Las funciones pueden recibir información, esta información se llama parametro. 
+                        Antes de que pueda utilizarlos, la función debe indicar cuántos argumentos necesita y cuál es el nombre de cada argumento. 
+                        Además, al invocar la función, se deben incluir los valores que se le van a pasar a la función. Los 
+                        argumentos se indican dentro de los paréntesis que van detrás del nombre de la función y se separan con una coma (,).
                     </p>
                     <p>
                         Por lo que la función quedará de la siguiente manera:
@@ -202,10 +194,9 @@
                     </pre>
 
                     <p>
-                        las funciones no solamente puede recibir variables y datos, sino que también pueden devolver 
-                        los valores que han calculado. Para devolver valores dentro de una función, se utiliza la palabra 
-                        reservada return. Aunque las funciones pueden devolver valores de cualquier tipo, 
-                        solamente pueden devolver un valor cada vez que se ejecutan.
+                        Las funciones tambien pueden retornar datos. Para ello se utiliza la palabra return, las funciones pueden devolver
+                        cualquier tipo de valor pero uno a la vez.
+                        
                     </p>
                     <pre class="prettyprint codigo">
 

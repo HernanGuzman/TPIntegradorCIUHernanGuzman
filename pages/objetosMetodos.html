@@ -71,32 +71,31 @@
                 Un método es una función asociada a un objeto, o, simplemente, un método es una propiedad 
                 de un objeto que es una función. Los métodos se definen normalmente como una función, con 
                 excepción de que tienen que ser asignados como la propiedad de un objeto.
-                 Consulte también definiciones de métodos para obtener más detalles. Un ejemplo puede ser:
+                Un ejemplo puede ser:
             </p>
             <pre class="prettyprint codigo">
 
                 objectName.methodname = functionName;
 
-                var myObj = {
-                  myMethod: function(params) {
+                var Persona = {
+                  Caminar: function(params) {
                     // ...hacer algo
                   }
               
                   // O ESTO TAMBIÉN FUNCIONA
               
-                  myOtherMethod(params) {
+                  Saltar(params) {
                     // ...hacer algo más
                     }
                 };
                 </pre>
             
             <p>
-                donde objectName es un objeto existente, 
-                methodname es el nombre que se le va a asignar al método, y functionName es 
-                el nombre de la función.
+                donde Persona es un objeto existente, 
+                Caminar es el nombre que se le va a asignar al método.
             </p>
             <p>
-                Entonces puedes llamar al método en el contexto del objeto de la siguiente manera:
+                Entonces se puede llamar al método en el contexto del objeto de la siguiente manera:
             </p>
 
             <pre class="prettyprint codigo">
@@ -106,50 +105,49 @@
             
 
                 <p>
-                    Puedes definir métodos para un tipo de objeto incluyendo una definición del método en la 
-                    función constructora del objeto. Podrías definir una función que formateé 
-                    y muestre las propiedades de los objetos del tipo Car previamente definidas; por ejemplo:
+                    Se puede definir métodos para un tipo de objeto incluyendo una definición del método en el constructor
+                     del objeto. Se podria crear un metodo que muestre los datos de las personas previamente definidas; por ejemplo:
                 </p>
                 <pre class="prettyprint codigo">
 
-                    function displayCar() {
-                        var result = `Un hermoso ${this.year} ${this.make} ${this.model}`;
+                    function mostrarPersona() {
+                        var result = `Nombre: ${this.nombre}, direccion ${this.make}, teléfono ${this.model}`;
                         pretty_print(result);
                       }
                 </pre>
                 <p>
-                    Donde pretty_print es una función para mostrar una línea horizontal y una cadena.
+                    pretty_print es una función de Javascript para mostrar una línea horizontal y una cadena.
+                    
                 </p>
                 <p>
-                    Puedes hacer de esta función un método de Car agregando la declaración
+                    Se puede hacer de esta función un método de Persona agregando la declaración
                 </p>
                 <pre class="prettyprint codigo">
 
-                    this.displayCar = displayCar;
+                    this.mostrarPersona = mostrarPersona;
                 </pre>
                 <p>
-                    a la definición del objeto. Por lo tanto, la definición completa de Car ahora se verá así:
+                    a la definición del objeto. Por lo tanto, la definición completa de Persona ahora se verá así:
                 </p>
                 <pre class="prettyprint codigo">
 
-                    function Car(make, model, year, owner) {
-                        this.make = make;
-                        this.model = model;
-                        this.year = year;
-                        this.owner = owner;
-                        this.displayCar = displayCar;
+                    function Persona(nombre, direccion, telefono) {
+                        this.nombre = nombre;
+                        this.direccion = direccion;
+                        this.telefono = telefono;
+                        this.mostrarPersona = mostrarPersona;
                       }
                 </pre>
                 <p>
-                    Entonces puedes llamar al método displayCar para cada uno de los objetos de la 
+                    Entonces se puede llamar al método mostrarPersona para cada uno de los objetos de la 
                     siguiente manera:
 
 
                 </p>
                 <pre class="prettyprint codigo">
 
-                    car1.displayCar();
-                    car2.displayCar();
+                    Persona1.mostrarPersona();
+                    Persona2.mostrarPersona();
                 </pre>
                 
                     
